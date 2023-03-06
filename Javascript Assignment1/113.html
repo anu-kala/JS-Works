@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="ans"></h1>
+</body>
+<script>
+    //https://betterprogramming.pub/when-to-use-bind-call-and-apply-in-javascript-1ae9d7fa66d5
+    //you can tie a function into an object as if it belonged to the object.
+   /* var obj = { num: 2 };
+    var obj1 = { num: 3 };
+    function add(a) {
+        document.getElementById('ans').innerText = (this.num +this.num+ a);
+    }
+    add.call(obj,obj1,10);
+    add.call(obj1,10);*/
+    var obj = { num: 2 };
+  
+    function add(a) {
+        document.getElementById('ans').innerText = (this.num +this.num+ a);
+    }
+    add.apply(obj,[10]);
+   
+</script>
+
+</html>

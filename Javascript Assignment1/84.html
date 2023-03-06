@@ -1,0 +1,18 @@
+<input type="number"  id="fahr" placeholder="Enter fahrenheit value">
+<input type="number"  id="cel"placeholder="Enter Degree Celcius">
+<button onclick="function1()" id="btn1">Celcius to fahrenheit</button>
+<button onclick="function2()" id="btn2"> fahrenheit to Celcius</button>
+<p id="para1"></p>
+
+<script>
+  function function1(){
+ var x =document.getElementById("fahr").value
+ var degree=5/9*(x-32);
+document.getElementById("para1").innerHTML=` ${degree } &deg;C`
+  }
+  function function2(){
+ var x =document.getElementById("cel").value
+ var fahrenheit=9/5*x+32;
+document.getElementById("para1").innerHTML=` ${fahrenheit} F`
+  }
+</script>

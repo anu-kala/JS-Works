@@ -1,0 +1,16 @@
+<input type="number" id="number"  class='number' name='number'>
+<button onclick="func()">Click here</button>
+<p id="ans"></p>
+<script>
+function func(){
+    var x=document.getElementById('number').value;
+    if(x%3==0 || x%7==0){
+document.getElementById("ans").innerHTML="yes";
+    }
+    else{
+        document.getElementById("ans").innerHTML="No";  
+    }
+}
+
+
+</script>

@@ -1,0 +1,12 @@
+<script>
+    //https://stackoverflow.com/questions/36517173/how-to-store-a-javascript-function-in-json
+    var student={
+        "name":"anupama",
+        "number":10,
+        "othernumbers":[20,30,40],
+        "function":{"arguments":"a,b,c","body":"return a*b+c;"}
+    }
+    var f = new Function(student.function.arguments, student.function.body);
+    console.log(f(student.number,student.othernumbers[0],student.othernumbers[1]));
+    
+</script>

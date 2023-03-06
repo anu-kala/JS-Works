@@ -1,0 +1,92 @@
+<input type="text" class="nameTxt" id="nameTxt" placeholder="Name" size="30"><br>
+
+<input type="tel" class="tel" id="tel" placeholder="Mobile No." size="30"><br>
+
+<button class="btn-click" onclick="validate()">Save</button>
+
+<p id="result1"></p>
+
+<table id="details">
+    <thead id="detailhead">
+        <tr>
+            <th>NAME</th>
+            <th>MOBILE NO.</th>
+            <th>DELETE</th>
+            <th>EDIT</th>
+        </tr>
+    </thead>
+    <tbody id="detailbody">
+
+    </tbody>
+</table>
+
+
+<script>
+    var selectedRow = null;
+    document.getElementById("details").style.display = "none";
+    function validate() {
+        var text1 = document.getElementById('nameTxt').value;
+        var regx1 = /^[a-zA-Z]+ [a-zA-Z]+$/;
+        var text2 = document.getElementById("tel").value;
+        var regx2 = /^[6-9]\d{9}$/;
+
+        var x;
+        if (regx1.test(text1) && regx2.test(text2)) {
+            x = "valid";
+            document.getElementById("details").style.display = "block";
+        }
+        else {
+            x = "invalid";
+        }
+        document.getElementById('result1').innerHTML = x;
+
+
+        if (x == "valid") {
+            document.getElementById('nameTxt').value = "";
+            document.getElementById('tel').value = "";
+
+            if (selectedRow == null) {
+                var rowTag1 = document.createElement('tr');
+                var columnTag1 = document.createElement('td')
+                columnTag1.innerText = text1;
+                rowTag1.append(columnTag1);
+                columnTag1 = document.createElement('td')
+                columnTag1.innerText = text2;
+
+                columnTag2 = document.createElement('td')
+                var delBtn = document.createElement('button');
+                delBtn.innerHTML = "Delete";
+                columnTag2.append(delBtn)
+
+                columnTag3 = document.createElement('td')
+                var editBtn = document.createElement('button');
+                editBtn.innerHTML = "Edit";
+                columnTag3.append(editBtn)
+
+                rowTag1.append(columnTag1);
+                rowTag1.append(columnTag2);
+                rowTag1.append(columnTag3);
+                document.getElementById('detailbody').append(rowTag1);
+                delBtn.addEventListener('click', function () {
+                    (this).closest('tr').remove();
+
+                });
+                editBtn.addEventListener('click', function () {
+                    selectedRow = (this).closest('tr');
+                    var nametext = selectedRow.childNodes[0].innerText;
+                    var teltext = selectedRow.childNodes[1].innerText;
+                    document.getElementById('nameTxt').value = nametext;
+                    document.getElementById('tel').value = teltext;
+                })
+
+
+            } else {
+                selectedRow.childNodes[0].innerText = text1;
+                selectedRow.childNodes[1].innerText = text2;
+                selectedRow = null;
+            }
+        }
+
+    }
+
+</script>

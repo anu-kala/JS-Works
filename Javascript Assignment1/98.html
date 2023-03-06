@@ -1,0 +1,13 @@
+<script>
+    i=0;
+    function uppercase(str){
+        var result="";
+      var  output=str.split(' ');
+      var len=output.length;
+      while(i<len){
+    result=result+(output[i][0].toUpperCase())+output[i].substring(1,output[i].length)+" ";
+    console.log(result);
+      i++;}
+    }
+    uppercase("hello world how are you")
+</script>

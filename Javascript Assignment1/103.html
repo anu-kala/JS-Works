@@ -1,0 +1,21 @@
+<script>
+
+	// Javascript program to extract unique characters from a string
+	function findUnique(str){
+	
+	// Split the string to make array
+	str = str.split("")
+	
+	// Create a set using array
+	str = new Set(str);
+    
+    str=[...str].join("")
+	
+	return str;
+	}
+	
+	
+	console.log(findUnique("Geeksforgeeks"))
+	console.log(findUnique("Geeksforgeeks Is a great site for computer science"))
+</script>
+

@@ -1,0 +1,20 @@
+<input type="textbox" id="txt1">
+<p id="para"></p>
+<button onclick="func()">click</button>
+<script>
+ 
+function func(){
+    var x=document.getElementById('txt1').value;
+    console.log(x)
+    setInterval(func1,1000);
+}
+
+
+function func1(){
+    var x=document.getElementById('txt1').value;
+   
+    document.getElementById('para').innerHTML=x;
+    
+   
+}
+</script>

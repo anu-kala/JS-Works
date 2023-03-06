@@ -1,0 +1,55 @@
+1) Write a javascript program to sum all the items in a Array. (Array is [100,20,-9,80])
+
+2) Write a javascript program to multiplies all the items in a Array. (Array is [50,10,30])
+
+3) Write a javascript program to get the largest number from a Array. (Array is [32,1,-90,980])
+
+4)  Write a javascript program to get the smallest number from a Array.(Array is [32,1,-90,980])
+
+5)  Write a javascript program to remove duplicates from an Array. (Array is [50,10,30,10,20,30])
+
+6) Write a javascript program to check a Array is empty or not. 
+(case 1: Array is [50,10,30,10,20,30])
+(case 2: Array is [])
+
+7)  Write a javascript program to clone or copy an Array.
+(Array is [10,20,30])
+
+8)  Write a javascript program to get the difference between the two Arrays. 
+(Array1 is [10,20,30] , Array2 is [10,100,20])
+
+9)  Write a javascript program access the index of a Array.
+( Array1 is [10,20,30] )
+
+10) Write a javascript program to append a Array to the second Array. 
+( Array1 is [10,20,30] )
+( Array2 is [100,200,300] )
+
+11) Write a javascript program to find the second smallest number in a Array.
+(Array is [50,10,30,10,20,30])
+
+12) Write a javascript program to find the second largest number in a Array.
+(Array is [50,10,30,10,20,30])
+
+13) Write a javascript program to get the count of the elements in a Array.
+i.e find count of no : 10
+(Array is [50,10,30,10,20,10])
+
+14) Write a javascript program to insert a given string at the beginning of all items in a Array
+Sample Array : [1,2,3,4], string : emp
+Expected output : ['emp1', 'emp2', 'emp3', 'emp4']
+
+15) Write a javascript program to remove even no from the Array
+Sample Array : [10,22,23,43,56,77,89,90]
+Expected output : [23,43,77,89]
+
+
+
+
+
+
+
+
+
+
+

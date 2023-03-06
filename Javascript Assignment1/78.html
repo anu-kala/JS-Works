@@ -1,0 +1,18 @@
+<input type="textbox" id="txt1">
+<p id="para"></p>
+<button onclick="func()">click</button>
+<script>
+ 
+function func(){
+    var x=document.getElementById('txt1').value;
+    console.log(x)
+    setTimeout(func1, 3000);
+   
+}
+//const myTimeout = 
+function func1(){
+    var x=document.getElementById('txt1').value;
+   
+    document.getElementById('para').innerHTML=  x;
+}
+</script>

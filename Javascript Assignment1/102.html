@@ -1,0 +1,37 @@
+<script>
+    function myfunc(array){
+    var len=array.length;
+    i=0;
+    max2=-Infinity;
+    max=-Infinity;
+    min2=Infinity;
+    min=Infinity;
+    while(i<len){
+        if(array[i]>max){
+            max2=max;
+            max=array[i];
+        }
+        else if(max>max2 && array[i]>max2){
+            max2=array[i];
+        }
+         if(array[i]<min){
+            min2=min;
+            min=array[i]
+
+         }
+         else if(min<min2 && array[i]<min2){
+            min2=array[i];
+        }
+
+    i++;
+    }
+    console.log("maximum value is" +" "+max);
+    console.log(" second maximum value is" +" "+max2);
+    console.log("minimum value is" + " "+min);
+    console.log("second minimum value is" +" "+min2);
+    }
+    console.log(myfunc([10,20,30,40,50,60]))
+
+
+
+</script>

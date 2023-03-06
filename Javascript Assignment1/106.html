@@ -1,0 +1,14 @@
+<script>
+function longestName(arr){
+   var lgt=0;
+   var longest;
+   for(i=0;i<arr.length;i++){
+    if(arr[i].length>lgt){
+        lgt=arr[i].length;
+        longest=arr[i];
+    }
+   }
+   console.log(longest)
+}
+longestName(['sunil','anil','ramesh','surya','suryaprakash'])
+</script>

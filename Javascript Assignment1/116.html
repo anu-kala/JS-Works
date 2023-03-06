@@ -1,0 +1,17 @@
+<input type="date" id="text"><br>
+<input type="text" id="x1">
+<input type="text" id="x2">
+<input type="text" id="x3">
+<button class="btn" onclick="func()">Click here</button>
+
+<script>
+function func(){
+var Dob=document.getElementById('text').value;
+var array=Dob.split("-");
+document.getElementById("x1").value=array[2];
+document.getElementById("x2").value=array[1];
+document.getElementById("x3").value=array[0];
+}
+
+
+</script>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .products {
+            margin: auto;
+            width: 400px;
+            height: 400px;
+
+        }
+
+        h4 {
+            margin-top:10px;
+            padding-top:10px;
+            border-top: 2px solid black;
+            border-bottom: 2px solid black;
+        }
+
+        .font1,
+        .font2 {
+            font-size: 12px;
+            margin-left: 300px;
+            
+        }
+       
+        i{
+            padding:0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="products ">
+        <div class="latestProducts">
+            <h4 id="latestHeading" class="latestHeading">
+                <span>Latest products<i class="fa-solid fa-plus font1"></i>
+                    <i class="fa-solid fa-minus font2"></i></span>
+            </h4>
+            <p id="latestText" class="latestText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore error tempore quod at soluta harum, ipsum eum amet libero aperiam porro earum impedit. Provident consequuntur ullam nisi voluptatibus, tempore sed.</p>
+        </div>
+        <div class="latestProducts">
+            <h4 id="latestHeading" class="latestHeading ">Upcoming products <i class="fa-solid fa-plus font1"></i>
+                <i class="fa-solid fa-minus font2"></i>
+            </h4>
+            <p id="latestText" class="latestText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore error tempore quod at solutaharum, ipsum eum amet libero aperiam porro earum impedit. Provident consequuntur ullam nisi voluptatibus,tempore sed.</p>
+        </div>
+    </div>
+
+</body>
+<script>
+    document.getElementsByClassName('latestText')[0].style.display = 'none';
+    document.getElementsByClassName('latestText')[1].style.display = 'none';
+
+    document.getElementsByClassName('font2')[0].style.display = 'none';
+    document.getElementsByClassName('font2')[1].style.display = 'none';
+
+
+    document.getElementsByClassName('latestHeading')[0].onclick = function () {
+        console.log(this.nextElementSibling);
+        console.log(this.nextElementSibling.style.display);
+        var ans = this.nextElementSibling.style.display;
+
+        if (ans == "none") {
+            document.getElementsByClassName('latestText')[0].style.display = 'block';
+            document.getElementsByClassName('font1')[0].style.display = 'none';
+            document.getElementsByClassName('font2')[0].style.display = 'inline-block';
+        }
+        else {
+            document.getElementsByClassName('latestText')[0].style.display = 'none';
+            document.getElementsByClassName('font1')[0].style.display = 'inline-block';
+            document.getElementsByClassName('font2')[0].style.display = 'none';
+        }
+    }
+    document.getElementsByClassName('latestHeading')[1].onclick = function () {
+        var ans = this.nextElementSibling.style.display;
+        if (ans == "none") {
+            document.getElementsByClassName('latestText')[1].style.display = 'block';
+            document.getElementsByClassName('font1')[1].style.display = 'none';
+            document.getElementsByClassName('font2')[1].style.display = 'inline-block';
+        }
+        else {
+            document.getElementsByClassName('latestText')[1].style.display = 'none';
+            document.getElementsByClassName('font1')[1].style.display = 'inline-block';
+            document.getElementsByClassName('font2')[1].style.display = 'none';
+        }
+    }
+
+
+</script>
+
+</html>

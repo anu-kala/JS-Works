@@ -1,0 +1,17 @@
+<input type="text" id="txt" onkeyup="func1()">
+<p id="para">
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo, repellat nobis. Recusandae minus quia aliquam corrupti, praesentium cum dolor laboriosam aliquid? Quaerat maxime iure, at rem dolorum beatae aspernatur quo.
+</p>
+<script>
+    function func1(){
+var x=document.getElementById('txt').value;
+
+if(!isNaN(x)){
+    x=Math.pow(x,2);
+    document.getElementById("para").innerHTML=x;
+    console.log(x);
+}
+
+    }
+
+</script>

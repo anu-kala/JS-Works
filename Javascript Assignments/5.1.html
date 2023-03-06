@@ -1,0 +1,25 @@
+<script>
+var array1=[1,2,3,1,2,3];
+var array2=[];
+var i = 0;
+var isDuplicate = false;
+while (i < array1.length) {
+    var j = 0;
+    while (j < array2.length) {
+        if (array2[j] === array1[i]) {
+            isDuplicate = true;
+            break;
+        } else {
+            isDuplicate = false;
+        }
+        j ++;
+    }
+    if (!isDuplicate){
+        array2.push(array1[i]);
+    }
+    console.log(i + " " + j + " " + isDuplicate)
+    i ++;
+}
+console.log(array2);
+
+</script>

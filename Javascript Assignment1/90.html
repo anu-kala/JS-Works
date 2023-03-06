@@ -1,0 +1,21 @@
+<script>
+    var array=["hello" ,"hello world" ,"how are you everyone","hai"];
+    var len=array.length;
+    i=0
+    var str1=0;
+    var temp=-Infinity;
+    while(i<len){
+        
+        var str=array[i].length;
+        if(str>temp){
+            temp=str;
+            str1=array[i];
+        }
+        i++;
+        
+
+    }
+    console.log(`longest string in an array is=> ${str1}`)
+    console.log(temp);
+
+</script>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="checkbox" class="cBox" id="cBox" onclick="functionCheck()">
+        <p id="pText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi laboriosam corrupti temporibus cumque sequi fugiat sapiente, optio voluptas molestias pariatur aspernatur beatae, reprehenderit sed assumenda culpa maxime quaerat delectus earum.
+       </p>
+    </div>
+    
+</body>
+<script>
+   var pText=document.getElementById('pText')
+    pText.style.display="none";
+function functionCheck(){
+    var checkBox=document.getElementById('cBox');
+   
+    
+    if(checkBox.checked==true){
+        pText.style.display="block";
+    }
+    else{
+        pText.style.display="none";
+    }
+}
+
+
+</script>

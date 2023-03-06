@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            min-height:100vh;
+        }
+        .modal_container{
+            background-color:rgba(0,0,0,0.3);
+            position:fixed;
+            top:0;
+            left:0;
+            height:100vh;
+            width:100vw;
+            pointer-events:none;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            opacity:0;
+            
+        }
+        .show{
+            opacity:1;
+            pointer-events:auto;
+        }
+        
+        .modal{
+            pointer-events:none;
+            background-color:white;
+            width:400px;
+            max-width:100%;
+            padding:20px;
+            border-radius:5px;
+            box-shadow:3px 3px 3px whitesmoke;
+            text-align: center;
+          
+        }
+    </style>
+</head>
+<body>
+    <button id="open">Click here</button>
+    <div class="modal_container" id="modal_container">
+<div class="modal" id="modal">
+<h1>Modals are</h1>
+<p>
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium et iusto officiis quis quas, incidunt, exercitationem labore sapiente itaque quidem maxime quia impedit iure deserunt. Ratione quam placeat consequatur aspernatur?
+</p>
+<button id="close">Close me</button>
+
+</div>
+</div>
+</body>
+<script>
+    var openbtn=document.getElementById("open");
+    var modalC =document.getElementById("modal_container");
+    var closebtn =document.getElementById("close");
+   
+    
+    openbtn.addEventListener('click',function(){
+        modalC.classList.add('show');
+    });
+
+    
+    closebtn.addEventListener('click',function(){
+        modalC.classList.remove('show')
+        
+ })
+
+
+</script>
+</html>

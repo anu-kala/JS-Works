@@ -1,0 +1,11 @@
+<input type="text" id="txt">
+<button id="btn" onclick="func()">click</button>
+<p id="demo"></p>
+<script>
+var mybtn=document.getElementById('btn');
+function func(){
+    document.querySelector('#txt').addEventListener('mouseover',function(){
+console.log('Your mouse is over txt Textbox');
+})
+}
+</script>
