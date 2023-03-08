@@ -1,0 +1,20 @@
+<button onClick="myfunc()">Enter</button>
+<ul>
+    <li class="list"></li>
+</ul>
+<p id="para"></p>
+<script>
+
+function myfunc(){
+ var inputTag=document.createElement('input');
+ inputTag.size="70"
+ inputTag.addEventListener("keyup",myfunc1)
+
+ function myfunc1(){
+document.getElementById("para").innerHTML="hello";
+ }
+ 
+ document.getElementsByClassName('list')[0].append(inputTag);
+
+}
+</script>
